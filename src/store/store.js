@@ -36,7 +36,8 @@ const middleWares = [!import.meta.env.PROD && logger].filter(Boolean);
 // );
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: middleWares,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(middleWares),
 });
 
 // export const persistor = persistStore(store);
