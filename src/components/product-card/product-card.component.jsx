@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/cart/cart.action";
 
-import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
+import Button from "../button/button.component";
 
 import {
   ProductCartContainer,
@@ -9,6 +9,7 @@ import {
   Name,
   Price,
 } from "./product-card.styles";
+import { BUTTON_TYPE_CLASSES } from "../button/button.type";
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
